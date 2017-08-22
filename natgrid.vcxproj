@@ -89,6 +89,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -140,20 +141,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="natgrid\natgrid.c" />
-    <ClCompile Include="natgrid\natgridd.c" />
-    <ClCompile Include="natgrid\natgrids.c" />
-    <ClCompile Include="natgrid\nncrunch.c" />
-    <ClCompile Include="natgrid\nncrunchd.c" />
-    <ClCompile Include="natgrid\nncrunchs.c" />
-    <ClCompile Include="natgrid\nnculld.c" />
-    <ClCompile Include="natgrid\nnculls.c" />
-    <ClCompile Include="natgrid\nnerror.c" />
-    <ClCompile Include="natgrid\nnuser.c" />
-    <ClCompile Include="natgrid\nnuserd.c" />
-    <ClCompile Include="natgrid\nnusers.c" />
+    <ClCompile Include="natgrid\natgrid.cpp" />
+    <ClCompile Include="natgrid\natgridd.cpp" />
+    <ClCompile Include="natgrid\natgrids.cpp" />
+    <ClCompile Include="natgrid\nncrunch.cpp" />
+    <ClCompile Include="natgrid\nncrunchd.cpp" />
+    <ClCompile Include="natgrid\nncrunchs.cpp" />
+    <ClCompile Include="natgrid\nnculld.cpp" />
+    <ClCompile Include="natgrid\nnculls.cpp" />
+    <ClCompile Include="natgrid\nnerror.cpp" />
+    <ClCompile Include="natgrid\nnuser.cpp" />
+    <ClCompile Include="natgrid\nnuserd.cpp" />
+    <ClCompile Include="natgrid\nnusers.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="natgrid\ncarg\ngmath.h" />
     <ClInclude Include="natgrid\nnchead.h" />
     <ClInclude Include="natgrid\nncheadd.h" />
     <ClInclude Include="natgrid\nncheads.h" />
