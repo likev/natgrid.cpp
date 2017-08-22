@@ -17,7 +17,7 @@ void    Initialized(int, double [], double [], int, int,
 double  armind(int, double *);
 double  armaxd(int, double *);
 
-extern int     ReadDatad();
+int ReadDatad(int numdat, double *xin, double *yin, double *zin);
 extern double  **MakeGridd(int, int, double *, double *);
 
 extern void   c_nnsetrd(char *, double);

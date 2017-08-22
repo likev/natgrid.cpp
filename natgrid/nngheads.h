@@ -17,7 +17,7 @@ void    Initialize(int, float [], float [], int, int,
 double  armin(int, float *);
 double  armax(int, float *);
 
-extern int    ReadData();
+int ReadData(int numdat, float *xin, float *yin, float *zin);
 extern float  **MakeGrid(int, int, float *, float *);
 
 extern void   c_nnsetr(char *, float);
