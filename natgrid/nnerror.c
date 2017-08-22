@@ -13,6 +13,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "nnchead.h"
 
 #define  MAX_ERROR 33
 

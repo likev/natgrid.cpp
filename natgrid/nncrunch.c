@@ -91,8 +91,7 @@ void Gradient()
       points[datcnt+i0][5] = 1;
    }
 }
-void FindNeigh(ipt)
-int ipt;
+void FindNeigh(int ipt)
 {  int i0, i1, i2, i3, j1, j2, j3, j4, j5;
    if (rootsimp->nextsimp EQ NULL) 
    {
@@ -619,8 +618,7 @@ void CircOut()
    }
 }
 
-void FindProp(wxd, wyd)
-double wxd, wyd;
+void FindProp(double wxd, double wyd)
 {  int i2, i3, i4, pos_count, inside;
    double xx, work3[3][3], work4[3][2];
    lastneig = rootneig;
