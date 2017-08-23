@@ -1,5 +1,6 @@
 /*
  * $Id: nnuser.c,v 1.9 2008-07-27 03:10:13 haley Exp $
+ * set or get some parameters ( globe variable)  used for controlling the behavior of Natgrid. 
  */
 /************************************************************************
 *                                                                       *

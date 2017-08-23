@@ -6,15 +6,14 @@ namespace natgrid {
 
 	extern int maxmsg;
 
-	/*
-	 *  Comparison function for qsort to sort double precision triples.
-	 */
-	int comp_dtriples(const void *q1, const void *q2)
+	
+	template<typename T>
+	int comp_triples(const void *q1, const void *q2)
 	{
-		double *p1, *p2;
+		T *p1, *p2;
 
-		p1 = (double *)q1;
-		p2 = (double *)q2;
+		p1 = (T *)q1;
+		p2 = (T *)q2;
 
 		if (p1[0] < p2[0]) {
 			return (-1);
@@ -48,6 +47,22 @@ namespace natgrid {
 	}
 
 	/*
+	 *  Comparison function for qsort to sort double precision triples.
+	 */
+	int comp_dtriples(const void *q1, const void *q2)
+	{
+		return comp_triples<double>(q1, q2);
+	}
+
+	/*
+	*  Comparison function for qsort to sort single precision triples.
+	*/
+	int comp_striples(const void *q1, const void *q2)
+	{
+		return comp_triples<float>(q1, q2);
+	}
+
+	/*
 	 *  This function culls duplicate double precision triples
 	 *  from an array of "tnum" such in "data".  The triples
 	 *  in "data" are assumed to have been sorted into
@@ -55,14 +70,16 @@ namespace natgrid {
 	 *  is returned and the distinct triples themselves
 	 *  are stored back in data.
 	 */
-	int cull_dtriples(int tnum, double *data) 
+
+	template<typename T>
+	int cull_triples(int tnum, T *data) 
 	{
 		int i, ic, icm1, kout = 0, msgmx = 0, fmsg = 0;
-		double *out, *xtmp;
+		T *out;
 
-		ic = 3 * sizeof(double);
-		icm1 = 2 * sizeof(double);
-		out = (double *)malloc(tnum*ic);
+		ic = 3 * sizeof(T);
+		icm1 = 2 * sizeof(T);
+		out = (T *)malloc(tnum*ic);
 
 		/*
 		 *  Copy over the first data triple.
@@ -104,7 +121,7 @@ namespace natgrid {
 			 *
 			 *  else if ( (memcmp((void *)(data+3*(i-1)),
 			 *                    (void *)(data+3*i),
-			 *                    2*sizeof(double);) == 0) &&
+			 *                    2*sizeof(T);) == 0) &&
 			 *            (memcmp((void *)(data+3*(i-1)),
 			 *                    (void *)(data+3*i),
 			 *                    ic  ) != 0) ) {
@@ -129,6 +146,16 @@ namespace natgrid {
 		memcpy((void *)data, (void *)out, kout*ic);
 		free(out);
 		return kout;
+	}
+
+	int cull_dtriples(int tnum, double *data)
+	{
+		return cull_triples(tnum, data);
+	}
+
+	int cull_striples(int tnum, float *data)
+	{
+		return cull_triples(tnum, data);
 	}
 
 }
