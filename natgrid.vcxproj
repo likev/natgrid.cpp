@@ -148,7 +148,6 @@
     <ClCompile Include="natgrid\nncrunchd.cpp" />
     <ClCompile Include="natgrid\nncrunchs.cpp" />
     <ClCompile Include="natgrid\nnculld.cpp" />
-    <ClCompile Include="natgrid\nnculls.cpp" />
     <ClCompile Include="natgrid\nnerror.cpp" />
     <ClCompile Include="natgrid\nnuser.cpp" />
     <ClCompile Include="natgrid\nnuserd.cpp" />
