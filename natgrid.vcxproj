@@ -155,7 +155,6 @@
     <ClCompile Include="natgrid\nnusers.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="natgrid\ncarg\ngmath.h" />
     <ClInclude Include="natgrid\nnchead.h" />
     <ClInclude Include="natgrid\nncheadd.h" />
     <ClInclude Include="natgrid\nncheads.h" />

@@ -13,10 +13,13 @@
 
 #include "ncarg/ngmath.h"
 
-extern void   c_nngetslopes(int, int, float *, int *);
-extern void   c_nngetaspects(int, int, float *, int *);
-extern void   c_nnpntinits(int, float *, float *, float *);
-extern void   c_nnpnts(float, float, float *);
-extern void   c_nnpntend();
-extern void   c_nngetwts(int *, int *, float *, float *, float *, float *);
-extern void   c_nngetwtsd(int *, int *, double *, double *, double *, double *);
+namespace natgrid {
+	extern void   c_nngetslopes(int, int, float *, int *);
+	extern void   c_nngetaspects(int, int, float *, int *);
+	extern void   c_nnpntinits(int, float *, float *, float *);
+	extern void   c_nnpnts(float, float, float *);
+	extern void   c_nnpntend();
+	extern void   c_nngetwts(int *, int *, float *, float *, float *, float *);
+	extern void   c_nngetwtsd(int *, int *, double *, double *, double *, double *);
+
+}

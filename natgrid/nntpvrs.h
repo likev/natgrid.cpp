@@ -10,9 +10,10 @@
 *    The use of this Software is governed by a License Agreement.       *
 *                                                                       *
 ************************************************************************/
-
-struct datum    *rootdat, *curdat, *holddat;
-struct simp     *rootsimp, *cursimp, *holdsimp, *lastsimp, *prevsimp;
-struct temp     *roottemp, *curtemp, *lasttemp, *prevtemp;
-struct neig     *rootneig, *curneig, *lastneig;
-struct asinfo   curas;
+namespace natgrid {
+	struct datum    *rootdat, *curdat, *holddat;
+	struct simp     *rootsimp, *cursimp, *holdsimp, *lastsimp, *prevsimp;
+	struct temp     *roottemp, *curtemp, *lasttemp, *prevtemp;
+	struct neig     *rootneig, *curneig, *lastneig;
+	struct asinfo   curas;
+}

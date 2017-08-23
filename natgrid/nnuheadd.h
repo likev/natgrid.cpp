@@ -13,9 +13,12 @@
 
 #include "ncarg/ngmath.h"
 
-extern void   c_nngetsloped(int, int, double *, int *);
-extern void   c_nngetaspectd(int, int, double *, int *);
+namespace natgrid {
+	extern void   c_nngetsloped(int, int, double *, int *);
+	extern void   c_nngetaspectd(int, int, double *, int *);
 
-void c_nnpntinitd(int n, double x[], double y[], double z[]);
-extern void   c_nnpntd(double, double, double *);
-extern void   c_nnpntendd();
+	void c_nnpntinitd(int n, double x[], double y[], double z[]);
+	extern void   c_nnpntd(double, double, double *);
+	extern void   c_nnpntendd();
+
+}

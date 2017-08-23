@@ -13,19 +13,23 @@
 
 #include "ncarg/ngmath.h"
 
-struct asinfod
-{  int          crows;
-   int          ccols;
-   double       **aspect_outd;
-   double       **slope_outd;
-};
-struct asinfod  curasd;
+namespace natgrid {
+	struct asinfod
+	{
+		int          crows;
+		int          ccols;
+		double       **aspect_outd;
+		double       **slope_outd;
+	};
+	struct asinfod  curasd;
 
-extern double   armind(int, double *);
-extern double   armaxd(int, double *);
+	extern double   armind(int, double *);
+	extern double   armaxd(int, double *);
 
-extern void     Initialized(int, double [], double [], int, int,
-                            double [], double []);
+	extern void     Initialized(int, double[], double[], int, int,
+		double[], double[]);
 
-int             ReadDatad(int, double *, double *, double *);
-double          **MakeGridd(int, int, double *, double *);
+	int             ReadDatad(int, double *, double *, double *);
+	double          **MakeGridd(int, int, double *, double *);
+
+}

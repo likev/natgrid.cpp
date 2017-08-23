@@ -11,19 +11,22 @@
 *                                                                       *
 ************************************************************************/
 
-void    Initialize(int, float [], float [], int, int, 
-                                  float [], float []);
+namespace natgrid {
+	void    Initialize(int, float[], float[], int, int,
+		float[], float[]);
 
-double  armin(int, float *);
-double  armax(int, float *);
+	double  armin(int, float *);
+	double  armax(int, float *);
 
-int ReadData(int numdat, float *xin, float *yin, float *zin);
-extern float  **MakeGrid(int, int, float *, float *);
+	int ReadData(int numdat, float *xin, float *yin, float *zin);
+	extern float  **MakeGrid(int, int, float *, float *);
 
-extern void   c_nnsetr(char *, float);
-extern void   c_nngetr(char *, float *);
+	extern void   c_nnsetr(char *, float);
+	extern void   c_nngetr(char *, float *);
 
-extern void   Terminate();
+	extern void   Terminate();
 
-extern int    cull_striples(int, float *);
-extern int    comp_striples(const void *, const void *);
+	extern int    cull_striples(int, float *);
+	extern int    comp_striples(const void *, const void *);
+
+}

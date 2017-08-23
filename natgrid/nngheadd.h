@@ -11,19 +11,22 @@
 *                                                                       *
 ************************************************************************/
 
-void    Initialized(int, double [], double [], int, int,
-                    double [], double []);
+namespace natgrid {
+	void    Initialized(int, double[], double[], int, int,
+		double[], double[]);
 
-double  armind(int, double *);
-double  armaxd(int, double *);
+	double  armind(int, double *);
+	double  armaxd(int, double *);
 
-int ReadDatad(int numdat, double *xin, double *yin, double *zin);
-extern double  **MakeGridd(int, int, double *, double *);
+	int ReadDatad(int numdat, double *xin, double *yin, double *zin);
+	extern double  **MakeGridd(int, int, double *, double *);
 
-extern void   c_nnsetrd(char *, double);
-extern void   c_nngetrd(char *, double *);
+	extern void   c_nnsetrd(char *, double);
+	extern void   c_nngetrd(char *, double *);
 
-extern void   Terminate();
+	extern void   Terminate();
 
-extern int    cull_dtriples(int, double *);
-extern int    comp_dtriples(const void *, const void *);
+	extern int    cull_dtriples(int, double *);
+	extern int    comp_dtriples(const void *, const void *);
+
+}

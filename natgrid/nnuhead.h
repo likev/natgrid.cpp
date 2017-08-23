@@ -13,20 +13,23 @@
 
 #include "ncarg/ngmath.h"
 
+namespace natgrid {
 #define EQ             ==
 #define NE             !=
 #define AND            &&
 #define OR             ||
 
-extern int       igrad,  densi,   non_neg,    sdip,        rads,
-                 optim,  extrap,  southhemi,  updir, auto_scale,
-                 adf,    nndup,   single_point, maxmsg;
+	extern int       igrad, densi, non_neg, sdip, rads,
+		optim, extrap, southhemi, updir, auto_scale,
+		adf, nndup, single_point, maxmsg;
 
-extern double    bI,        bJ,         magx,       magy,
-                 magz,      horilap,    vertlap,    nuldat,
-                 magx_auto, magy_auto,  magz_auto,  horilap_save,
-                 vertlap_save;
+	extern double    bI, bJ, magx, magy,
+		magz, horilap, vertlap, nuldat,
+		magx_auto, magy_auto, magz_auto, horilap_save,
+		vertlap_save;
 
-extern char      tri_file[], error_file[], emsg[];
+	extern char      tri_file[], error_file[], emsg[];
 
-extern void   ErrorHnd(int, char *, FILE *, char *);
+	extern void   ErrorHnd(int, char *, FILE *, char *);
+
+}
